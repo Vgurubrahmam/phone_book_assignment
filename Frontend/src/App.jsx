@@ -48,7 +48,7 @@ const App = () => {
   };
 
   const fetchData = () => {
-    fetch("https://phone-book-backend-six.vercel.app/get-phone")
+    fetch("https://phone-book-backend-assignment.onrender.com/get-phone")
       .then((response) => {
         return response.json();
       })
@@ -69,7 +69,7 @@ const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
-    fetch("https://phone-book-backend-six.vercel.app/add-phone", {
+    fetch("https://phone-book-backend-assignment.onrender.com/add-phone", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -99,7 +99,7 @@ const App = () => {
   };
 
   const handleDelete = (formData) => {
-    fetch("https://phone-book-backend-six.vercel.app/delete-phone/" + formData._id, {
+    fetch("https://phone-book-backend-assignment.onrender.com/delete-phone/" + formData._id, {
       method: "DELETE",
     })
     .catch((err) => {
@@ -110,7 +110,7 @@ const App = () => {
 
   const handleUpdate = (event) => {
     event.preventDefault();
-    fetch("https://phone-book-backend-six.vercel.app/update-phone/" + updateData._id, {
+    fetch("https://phone-book-backend-assignment.onrender.com/update-phone/" + updateData._id, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
