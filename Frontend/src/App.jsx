@@ -3,8 +3,10 @@ import './App.css'
 
 const App = () => {
   const [data, setData] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [getData, setGetData] = useState([]);
 
+  // eslint-disable-next-line no-unused-vars
   const [status, setStatus] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -46,7 +48,7 @@ const App = () => {
   };
 
   const fetchData = () => {
-    fetch("https://phonebook-backend-phi.vercel.app/get-phone")
+    fetch("https://phone-book-backend-six.vercel.app/get-phone")
       .then((response) => {
         return response.json();
       })
@@ -67,7 +69,7 @@ const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
-    fetch("https://phonebook-backend-phi.vercel.app/add-phone", {
+    fetch("https://phone-book-backend-six.vercel.app/add-phone", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -97,7 +99,7 @@ const App = () => {
   };
 
   const handleDelete = (formData) => {
-    fetch("https://phonebook-backend-phi.vercel.app/delete-phone/" + formData._id, {
+    fetch("https://phone-book-backend-six.vercel.app/delete-phone/" + formData._id, {
       method: "DELETE",
     })
     .catch((err) => {
@@ -108,7 +110,7 @@ const App = () => {
 
   const handleUpdate = (event) => {
     event.preventDefault();
-    fetch("https://phonebook-backend-phi.vercel.app/update-phone/" + updateData._id, {
+    fetch("https://phone-book-backend-six.vercel.app/update-phone/" + updateData._id, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
