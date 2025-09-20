@@ -24,9 +24,7 @@ mongoose.connect(DB).then(() => {
 
 // Add logging to debug raw request body
 app.post("/add-phone", async (req, res) => {
-    console.log("Raw request body:");
     const details = req.body;
-    console.log(details);
     const phoneNumber = new PhoneBook(req.body);
     try {
       await phoneNumber.save();
@@ -47,7 +45,6 @@ app.post("/add-phone", async (req, res) => {
 
 
   app.get('/get-phone', async (req,res) => {
-    console.log("first")
     const phoneNumbers = await PhoneBook.find({})
     try{
         res.status(200).json({

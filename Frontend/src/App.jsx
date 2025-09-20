@@ -54,7 +54,6 @@ const App = () => {
       })
       .then((results) => {
         setData(results.data.phoneNumbers);
-        console.log(results);
       })
       .catch((error) => {
         console.error("There was a problem with the fetch operation:", error);
@@ -63,12 +62,10 @@ const App = () => {
 
   useEffect(() => {
     fetchData();
-    console.log(getData);
   }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
     fetch("https://phone-book-backend-assignment.onrender.com/add-phone", {
       method: "POST",
       headers: {
@@ -118,8 +115,8 @@ const App = () => {
       body: JSON.stringify(updateData),
     })
       .then((response) => response.json())
+      // eslint-disable-next-line no-unused-vars
       .then((result) => {
-        console.log(result);
         fetchData();
         setUpdateData({
           _id: "",
