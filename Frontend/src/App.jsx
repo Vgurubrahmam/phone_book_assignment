@@ -13,7 +13,6 @@ const App = () => {
     phone: "",
   email:"",
     Dateofbirth:"",
-    imageurl:"",
   });
   const [updateData, setUpdateData] = useState({
     _id: "",
@@ -21,7 +20,6 @@ const App = () => {
     phone: "",
   email:"",
     Dateofbirth:"",
-    imageurl:"",
   });
 
   const handleSubmitChange = (event) => {
@@ -82,7 +80,6 @@ const App = () => {
           phone: "",
           email:"",
          Dateofbirth:"",
-        imageurl:"",
         });
         setUpdateData({
           _id: "name",
@@ -90,7 +87,6 @@ const App = () => {
           phone: "",
           email:"",
           Dateofbirth:"",
-          imageurl:"",
         });
       });
   };
@@ -124,7 +120,6 @@ const App = () => {
           phone: "",
           email:"",
       Dateofbirth:"",
-      imageurl:"",
         });
       });
   };
@@ -247,15 +242,7 @@ const App = () => {
                               value={updateData.Dateofbirth}
                               onChange={handleUpdateChange}
                             ></input>
-                            <input
-                              required
-                              type="text"
-                              className="enter-input"
-                              placeholder="img.."
-                              name="imageurl"
-                              value={updateData.imageurl}
-                              onChange={handleUpdateChange}
-                            ></input>
+                            
                             <button
                               type="submit"
                               className="custom-button bg-info text-white mt-5"
@@ -353,15 +340,7 @@ const App = () => {
                               value={formData.Dateofbirth}
                               onChange={handleSubmitChange}
                             ></input>
-                            <input
-                              required
-                              type="string"
-                              className="enter-input"
-                              placeholder="img.."
-                              name="imageurl"
-                              value={formData.imageurl}
-                              onChange={handleSubmitChange}
-                            ></input>
+                            
                             <button
                               type="submit"
                               className="custom-button bg-info text-white mt-5"
