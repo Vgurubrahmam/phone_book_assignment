@@ -142,12 +142,9 @@ const App = () => {
                     <thead>
                       <tr className="bg-info scrollable-table z-index-100 mb-3 top-0">
                         <th scope="col">Name</th>
-                        <th scope="col">Image</th>
                         <th scope="col">Phone number</th>
-                        
                         <th scope="col">Email</th>
                         <th scope="col">D_o_B</th>
-                        
                         <th scope="col">Update</th>
                         <th scope="col">Delete</th>
                       </tr>
@@ -157,12 +154,9 @@ const App = () => {
                       data.map((result, key) => (
                         <tr key={key}>
                           <td scope="row">{result.name}</td>
-                          <td scope="row"><img src={result.imageurl} className="size"></img></td>
                           <td scope="row">{result.phone}</td>
-                          
                           <td scope="row">{result.email}</td>
                           <td scope="row">{result.Dateofbirth}</td>
-                          
                           <td>
                       
                             <i
