@@ -11,7 +11,7 @@ const App = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    Adhar_no:"",
+  email:"",
     Dateofbirth:"",
     imageurl:"",
   });
@@ -19,7 +19,7 @@ const App = () => {
     _id: "",
     name: "",
     phone: "",
-    Adhar_no:"",
+  email:"",
     Dateofbirth:"",
     imageurl:"",
   });
@@ -80,7 +80,7 @@ const App = () => {
         setFormData({
           name: "",
           phone: "",
-          Adhar_no:"",
+          email:"",
          Dateofbirth:"",
         imageurl:"",
         });
@@ -88,7 +88,7 @@ const App = () => {
           _id: "name",
           name: "",
           phone: "",
-          Adhar_no:"",
+          email:"",
           Dateofbirth:"",
           imageurl:"",
         });
@@ -122,7 +122,7 @@ const App = () => {
           _id: "",
           name: "",
           phone: "",
-          Adhar_no:"",
+          email:"",
       Dateofbirth:"",
       imageurl:"",
         });
@@ -145,7 +145,7 @@ const App = () => {
                         <th scope="col">Image</th>
                         <th scope="col">Phone number</th>
                         
-                        <th scope="col">Adhar_no</th>
+                        <th scope="col">Email</th>
                         <th scope="col">D_o_B</th>
                         
                         <th scope="col">Update</th>
@@ -160,7 +160,7 @@ const App = () => {
                           <td scope="row"><img src={result.imageurl} className="size"></img></td>
                           <td scope="row">{result.phone}</td>
                           
-                          <td scope="row">{result.Adhar_no}</td>
+                          <td scope="row">{result.email}</td>
                           <td scope="row">{result.Dateofbirth}</td>
                           
                           <td>
@@ -237,14 +237,11 @@ const App = () => {
                             ></input>
                             <input
                               required
-                              type="tel"
+                              type="email"
                               className="enter-input"
-                              placeholder="Name.."
-                              name="Adhar_no"
-                              minLength={12}
-                              maxLength={12}
-                              onKeyDown={handleKeypress}
-                              value={updateData.Adhar_no}
+                              placeholder="Email.."
+                              name="email"
+                              value={updateData.email}
                               onChange={handleUpdateChange}
                             ></input>
                             <input
@@ -346,14 +343,11 @@ const App = () => {
                             ></input>
                             <input
                               required
-                              type="tel"
+                              type="email"
                               className="enter-input"
-                              placeholder="Adhar.."
-                              name="Adhar_no"
-                              minLength={12}
-                              maxLength={12}
-                              onKeyDown={handleKeypress}
-                              value={formData.Adhar_no}
+                              placeholder="Email.."
+                              name="email"
+                              value={formData.email}
                               onChange={handleSubmitChange}
                             ></input>
                             <input
