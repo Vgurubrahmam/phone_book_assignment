@@ -130,7 +130,7 @@ const App = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h1 className="phone-book-heading">ID CARD</h1>
+              <h1 className="phone-book-heading">Phone Book</h1>
               <div className="d-flex flex-row justify-content-center align-items-center rounded-3 card-form  mt-0">
                 <div className="scrollable-table-container d-flex justify-content-center">
                   <table className="table table-hover">
